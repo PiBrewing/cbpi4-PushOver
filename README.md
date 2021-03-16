@@ -2,23 +2,24 @@
 
 ## Plugin to forward Craftbeerpi4 Notifications to Pushover Push Notification service
 
-###Installation:
+- Installation:
 
-- pip isntal cbpi4-PushOver
--> or installation from github
+	- Plugin requires cbpi >= 4.0.0.33
+	- pip install cbpi4-PushOver
+	- or installation from github
+	- cbpi add cbpi4-PushOver
 
-cbpi add cbpi4-PushOver
+- Usage:
 
-###Usage:
+	- First Installation will add parameters to settings.
+	- Configure settings by adding token and user.
+	- Restart cbpi
 
-- First Installation will add parameters to settings.
-- Configure settings by adding token and user.
-- Restart cbpi
+- Parameters:
 
-###Parameters:
+	- pushover_token: your token for this service
+	- pushover_user: your user for this service
 
-- pushover_token: your token for this service
-- pushover_user: your user for this service
+- Changelog:
 
-###Changelog:
 15.03.21: Initial Release.
