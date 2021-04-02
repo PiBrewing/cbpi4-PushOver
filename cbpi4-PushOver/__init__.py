@@ -50,7 +50,7 @@ class PushOver(CBPiExtension):
             try:
                 await self.cbpi.config.add("pushover_token", "", ConfigType.STRING, "Pushover API Token")
             except:
-                logger.warning('Unable to update database')
+                logger.warning('Unable to update config')
                 
     async def pushoverUser(self):
         global pushover_user
@@ -60,7 +60,7 @@ class PushOver(CBPiExtension):
             try:
                 await self.cbpi.config.add("pushover_user", "", ConfigType.STRING, "Pushover User Key")
             except:
-                logger.warning('Unable to update database')
+                logger.warning('Unable to update config')
 
     async def messageEvent(self, cbpi, title, message, type, action):
             pushoverData = {}

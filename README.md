@@ -22,4 +22,8 @@
 
 - Changelog:
 
+02.04.21:
+
+- Minor changes
+
 15.03.21: Initial Release.
