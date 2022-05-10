@@ -7,7 +7,7 @@
 	- Plugin requires cbpi >= 4.0.0.33
 	- pip install cbpi4-PushOver
 	- or installation from github
-	- cbpi add cbpi4-PushOver
+
 
 - Usage:
 
@@ -22,7 +22,7 @@
 
 ### Changelog:
 
-- 10.05.22: (0.0.5) Updated README (removed cbpi add)
+- 10.05.22: (0.0.6) Updated README (removed cbpi add)
 - 10.05.22: (0.0.4) Removed cbpi dependency
 - 02.04.21:  Minor changes
 - 15.03.21: Initial Release.
