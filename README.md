@@ -20,10 +20,8 @@
 	- pushover_token: your token for this service
 	- pushover_user: your user for this service
 
-- Changelog:
+### Changelog:
 
-02.04.21:
-
-- Minor changes
-
-15.03.21: Initial Release.
+- 10.05.22: (0.0.4) Removed cbpi dependency
+- 02.04.21:  Minor changes
+- 15.03.21: Initial Release.
