@@ -32,8 +32,9 @@ class PushOver(CBPiExtension):
     async def run(self):
         plugin = await self.cbpi.plugin.load_plugin_list("cbpi4-PushOver")
         self.version=plugin[0].get("Version","0.0.0")
+        self.name=plugin[0].get("Name","cbpi4-PushOver")
 
-        self.pushover_update = self.cbpi.config.get("pushover_update", None)
+        self.pushover_update = self.cbpi.config.get(self.name+"_update", None)
 
         logger.info('Starting PushOver Notifications background task')
         await self.pushover_settings()
@@ -56,34 +57,39 @@ class PushOver(CBPiExtension):
         if pushover_token is None:
             logger.info("INIT Pushover Token")
             try:
-                await self.cbpi.config.add("pushover_token", "", type=ConfigType.STRING, description="Pushover API Token",source="cbpi4-PushOver")
-            except:
+                await self.cbpi.config.add("pushover_token", "", type=ConfigType.STRING, description="Pushover API Token",source=self.name)
+            except Exception as e:
                 logger.warning('Unable to update config')
+                logger.error(e)
         else:
             if self.pushover_update == None or self.pushover_update != self.version:
                 try:                
-                    await self.cbpi.config.add("pushover_token", pushover_token, type=ConfigType.STRING, description="Pushover API Token",source="cbpi4-PushOver")
-                except:
+                    await self.cbpi.config.add("pushover_token", pushover_token, type=ConfigType.STRING, description="Pushover API Token",source=self.name)
+                except Exception as e:
                     logger.warning('Unable to update config')
+                    logger.error(e)
 
         if pushover_user is None:
             logger.info("INIT Pushover User Key")
             try:
-                await self.cbpi.config.add("pushover_user", "", type=ConfigType.STRING, description="Pushover User Key",source="cbpi4-PushOver")
-            except:
+                await self.cbpi.config.add("pushover_user", "", type=ConfigType.STRING, description="Pushover User Key",source=self.name)
+            except Exception as e:
                 logger.warning('Unable to update config')
+                logger.error(e)
         else:
             if self.pushover_update == None or self.pushover_update != self.version:
                 try:
-                    await self.cbpi.config.add("pushover_user", pushover_user, type=ConfigType.STRING, description="Pushover User Key",source="cbpi4-PushOver")
-                except:
+                    await self.cbpi.config.add("pushover_user", pushover_user, type=ConfigType.STRING, description="Pushover User Key",source=self.name)
+                except Exception as e:
                     logger.warning('Unable to update config')
+                    logger.error(e)
 
         if self.pushover_update == None or self.pushover_update != self.version:
             try:
-                await self.cbpi.config.add("pushover_update", self.version, type=ConfigType.STRING, description="Pushover Update Version",source="hidden")
-            except:
+                await self.cbpi.config.add(self.name+"_update", self.version, type=ConfigType.STRING, description="Pushover Update Version",source="hidden")
+            except Exception as e:
                 logger.warning('Unable to update config')
+                logger.error(e)
         
 
     async def messageEvent(self, cbpi, title, message, type, action):

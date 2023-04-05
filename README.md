@@ -22,7 +22,7 @@
 
 ### Changelog:
 
-- 04.04.23: (0.0.8.a1) test for plugin settings selection test branch
+- 05.04.23: (0.0.8.a2) test for plugin settings selection test branch
 - 10.05.22: (0.0.7) Updated README (removed cbpi add)
 - 10.05.22: (0.0.4) Removed cbpi dependency
 - 02.04.21:  Minor changes
