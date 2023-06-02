@@ -4,7 +4,7 @@
 
 - Installation:
 
-	- Plugin requires cbpi >= 4.0.0.33
+	- Plugin requires cbpi >= 4.1.10.rc2
 	- sudo pip3 install cbpi4-PushOver
 	- or installation from github
 
@@ -22,6 +22,7 @@
 
 ### Changelog:
 
+- 02.06.23: (0.0.6.rc1) added cbpi4 requirement
 - 05.04.23: (0.0.8.a2) test for plugin settings selection test branch
 - 10.05.22: (0.0.7) Updated README (removed cbpi add)
 - 10.05.22: (0.0.4) Removed cbpi dependency
