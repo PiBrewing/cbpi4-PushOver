@@ -22,8 +22,8 @@
 
 ### Changelog:
 
-- 10.06.23: (0.0.6) bump version to release
-- 02.06.23: (0.0.6.rc1) added cbpi4 requirement
+- 10.06.23: (0.0.8) bump version to release
+- 02.06.23: (0.0.8.rc1) added cbpi4 requirement
 - 05.04.23: (0.0.8.a2) test for plugin settings selection test branch
 - 10.05.22: (0.0.7) Updated README (removed cbpi add)
 - 10.05.22: (0.0.4) Removed cbpi dependency
