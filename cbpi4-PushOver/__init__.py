@@ -96,6 +96,7 @@ class PushOver(CBPiExtension):
             pushoverData = {}
             pushoverData["token"] = pushover_token
             pushoverData["user"] = pushover_user
+            pushoverData["html"] = 1
             pushoverData["message"] = message 
             pushoverData["title"] = title
             requests.post("https://api.pushover.net/1/messages.json", data=pushoverData)
