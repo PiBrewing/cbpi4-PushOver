@@ -22,6 +22,8 @@
 
 ### Changelog:
 
+- 10.10.25: (0.0.10) Error handling during message sending via request
+- 17.01.25: (0.0.9) Allow HTML in message
 - 10.06.23: (0.0.8) bump version to release
 - 02.06.23: (0.0.8.rc1) added cbpi4 requirement
 - 05.04.23: (0.0.8.a2) test for plugin settings selection test branch
