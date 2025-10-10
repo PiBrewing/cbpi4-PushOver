@@ -99,7 +99,12 @@ class PushOver(CBPiExtension):
             pushoverData["html"] = 1
             pushoverData["message"] = message 
             pushoverData["title"] = title
-            requests.post("https://api.pushover.net/1/messages.json", data=pushoverData)
+            try:
+                requests.post("https://api.pushover.net/1/messages.json", data=pushoverData)
+                logger.info("Pushover Notification sent: {}".format(title))
+            except Exception as e:
+                logging.warning('Unable to send Pushover Notification')
+                logging.error(e)
 
 def setup(cbpi):
     cbpi.plugin.register("PushOver", PushOver)
